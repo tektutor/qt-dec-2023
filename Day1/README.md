@@ -74,3 +74,28 @@ Project Management, click on "Finish" button
 
 File Changed - Qt Creator, select "Yes to All"
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/e99adf97-69d3-4dd3-8f4c-31334f371d75)
+
+Currently, your main.qml file will look as shown below
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/103324e6-25d6-46fa-9bf2-f09c7f3de277)
+
+We need to edit the main.qml as shown below
+<pre>
+import QtQuick 2.15
+
+Window {
+    width: 1000; height: 1000
+    visible: true
+
+    Rectangle {
+        width: 500; height: 500
+
+        color: "blue"
+
+        Text {
+            anchors.centerIn: parent
+            text: "Hello QML!"
+        }
+    }
+}    
+</pre>
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/70806ff7-059c-4e80-85ad-008f5a61578d)
