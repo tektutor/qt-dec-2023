@@ -253,3 +253,128 @@ When your mouse cursor enter the button area, it would look as shown below
 When your mouse cursor leaves the button area, it would look as shown below
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/3ca524de-00a1-4898-a426-21bd789a567b)
 
+## ⛹️‍♂️ Lab3 - Understanding QML Column Positioner
+
+Create a new QML Project following the Lab1 steps.
+
+### Step 1 - Your .pro file shall be updated as shown below
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/58298366-34fe-48d4-8c8d-da4e925c8fbb)
+
+### Step 2 - Your Button.qml shall be updated as shown below
+<pre>
+import QtQuick 2.15
+
+Rectangle {
+    id: button
+
+    width: 150; height: 80
+
+    property string caption: "Button"
+    signal buttonClicked()
+
+    color: "darkgray"
+
+    border.width: 5
+    border.color: Qt.color("blue")
+
+    radius: 40
+
+    Text {
+        anchors.centerIn: parent
+        font.bold: true
+        font.pointSize: 15
+        color: "white"
+
+        text: caption
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        hoverEnabled: true
+
+        onClicked: {
+            buttonClicked()
+        }
+
+        onEntered: {
+            button.scale = 1.1
+            button.border.color = Qt.color("red")
+        }
+
+        onExited: {
+            button.scale = 1.0
+            button.border.color = Qt.color("blue")
+        }
+    }
+}
+    
+</pre>
+
+### Step 3 - Your main.qml shall be updated as shown below
+<pre>
+import QtQuick 2.15
+
+Window {
+    width: 1000; height: 1000
+    visible: true
+
+    Rectangle {
+        width: 500; height: 500
+        radius: 50
+
+        border.width: 5
+        border.color: Qt.color("blue")
+
+        anchors.centerIn: parent
+
+        Text {
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "QML Column Positioner"
+            y: 10
+
+            font.bold: true
+            font.pointSize: 20
+
+        }
+
+        Column {
+            anchors.centerIn: parent
+            spacing: 20
+
+            Button {
+                id: button1
+                caption: "Button1"
+
+                onButtonClicked:
+                    console.log (caption + " clicked")
+            }
+
+            Button {
+                id: button2
+                caption: "Button2"
+
+                onButtonClicked:
+                    console.log (caption + " clicked")
+            }
+
+            Button {
+                id: button3
+                caption: "Button3"
+
+                onButtonClicked:
+                    console.log (caption + " clicked")
+            }
+
+        } //Column
+    } //Rectangle
+}    
+</pre>
+
+### Step 4 - Save All
+Make sure you have saved all your changes [Ctrl + Shift + S]
+
+### Step 5 - Build and Run
+
+Build (Ctrl+B)
+
+Run (Ctrl+R)
