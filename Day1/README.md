@@ -52,4 +52,11 @@ int main(int argc, char *argv[])
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/dc057a8a-cf91-4fe0-bafe-a846c400fa4b)
 
 Next, we need to add a Qt Resource File to the project
-![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/62c4c37a-d02f-4886-aed3-1d370a932c0b)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/c1ef830a-f8f8-4958-ab08-b39d76ab382c)
+
+Location
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/de325c99-631f-4608-a76b-0f372bb9ecad)
+
+Project Management, click on "Finish" button
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/f7c5a8c0-f97a-49d4-879e-e6a6c203719e)
+
