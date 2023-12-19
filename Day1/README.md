@@ -108,3 +108,30 @@ Build (Ctrl+B)
 
 Run (Ctrl+R)
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/763d3ac6-7841-4cc6-911d-01d942f7d7e6)
+
+Let's change the font color to White and make the font bold and increate the font size by updating the main.qml as shown below
+<pre>
+import QtQuick 2.15
+
+Window {
+    width: 1000; height: 1000
+    visible: true
+
+    Rectangle {
+        width: 500; height: 500
+
+        color: "blue"
+
+        Text {
+            anchors.centerIn: parent
+            text: "Hello QML!"
+            
+            color: "white"
+            font.bold: true
+            font.pointSize: 20
+            
+        }
+    }
+}    
+</pre>
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/0afb2fb5-7b78-4afa-aff6-09b216d9a46e)
