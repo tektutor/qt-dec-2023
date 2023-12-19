@@ -714,3 +714,228 @@ To build your project, press [Ctrl + B]
 
 To Run your project, press [Ctrl + R]
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/cab802d9-0012-4744-8aab-6bdf50236494)
+
+## ⛹️‍♂️ Lab6 - States and Transitions
+
+### Step 1 - Create a QML project
+Following the Lab1 steps, create a new qml project and name it as "StatesAndTransitions"
+
+### Step 2 - Update the .pro file as shown below
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/813bebe8-a896-4dd9-b3da-17ee0327a45e)
+
+### Step 3 - Update your main.cpp as shown below
+```
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+
+int main(int argc, char *argv[])
+{
+    QGuiApplication a(argc, argv);
+
+    QQmlApplicationEngine engine;
+    engine.load( QUrl(QStringLiteral("qrc:/main.qml")));
+
+    return a.exec();
+}    
+```
+
+### Step 4 - Update your Light.qml as shown below
+<pre>
+import QtQuick 2.15
+
+Rectangle {
+    width: 200; height: 200
+    radius: 100
+
+    state: "off"
+
+    property string lightColor: "black"
+    color: "black"
+
+    Rectangle {
+       id: light
+
+       anchors.centerIn: parent
+       width: 180; height: 180
+       radius: 90
+       border.color: "white"
+       border.width: 5
+       color: lightColor
+    }
+
+    states : [
+        State {
+            name: "on"
+
+            PropertyChanges {
+                light  {
+                    color: lightColor
+                }
+            }
+        },
+        State {
+            name: "off"
+            PropertyChanges {
+                light {
+                    color: "black"
+                }
+            }
+        }
+    ]
+}    
+</pre>
+
+### Step 5 - Update your TrafficSignal.qml as shown below
+<pre>
+import QtQuick 2.15
+
+Rectangle {
+    width: 250
+    height: 650
+    color: "darkgray"
+    state: "go"
+
+    Column {
+        anchors.centerIn: parent
+        Light {
+            id: redLight
+            lightColor: "red"
+        }
+        Light {
+            id: orangeLight
+            lightColor: "orange"
+        }
+        Light {
+            id: greenLight
+            lightColor: "green"
+        }
+    }
+
+    states: [
+        State {
+            name: "go"
+
+            PropertyChanges {
+                redLight {
+                    state: "off"
+                }
+            }
+            PropertyChanges {
+                orangeLight {
+                    state: "off"
+                }
+            }
+            PropertyChanges {
+                greenLight {
+                    state: "on"
+                }
+            }
+        },
+        State {
+            name: "stop"
+            PropertyChanges {
+                redLight {
+                    state: "on"
+                }
+            }
+            PropertyChanges {
+                orangeLight {
+                    state: "off"
+                }
+            }
+            PropertyChanges {
+                greenLight {
+                    state: "off"
+                }
+            }
+        },
+        State {
+            name: "ready"
+            PropertyChanges {
+                redLight {
+                    state: "off"
+                }
+            }
+            PropertyChanges {
+                orangeLight {
+                    state: "on"
+                }
+            }
+            PropertyChanges {
+                greenLight {
+                    state: "off"
+                }
+            }
+        }
+    ]
+
+    Timer {
+        running: true
+        repeat: true
+        interval: 3000
+        onTriggered: {
+            if ( trafficSignal.state === "go" ) {
+                console.log("Moving from Go to ready state")
+                trafficSignal.state = "ready"
+            }
+            else if ( trafficSignal.state === "ready" ) {
+                console.log("Moving from ready to stop state")
+                trafficSignal.state = "stop"
+            }
+            else {
+                console.log("Moving from stop to go state")
+                trafficSignal.state = "go"
+            }
+        }
+    }
+
+
+}    
+</pre>
+
+### Step 6 - Update your main.qml as shown below
+<pre>
+import QtQuick 2.15
+
+Window {
+    width: 1000; height: 1000
+    visible: true
+
+    Rectangle {
+        id: pole
+        color: "black"
+        width: 50
+        height: parent.height
+        x: 10
+    }
+
+    Rectangle {
+        id: horizontalBar
+        color: "black"
+        width: 400
+        height: 50
+        x:60
+        y: 20
+    }
+
+    Rectangle {
+        id: connectingRod
+        color: "black"
+        width: 25
+        height: 200
+        x:400
+        y: 20
+    }
+
+  TrafficSignal {
+      id: trafficSignal
+      anchors.centerIn: parent
+      state: "go"
+  }
+}    
+</pre>
+
+### Step 7 - Build and Run
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/bf87b536-3445-4b75-9f42-e43e10ecf0ae)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/41cbc60e-37aa-4686-991d-c38171cecb99)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/0ee42825-bb3b-47d2-b058-250c2ea26854)
