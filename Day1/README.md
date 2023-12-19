@@ -240,6 +240,7 @@ Window {
     }
 }    
 </pre>
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/30caae9d-293d-4827-9a8c-c4e3d1c74082)
 
 You may build your project (Ctrl+B)
 
