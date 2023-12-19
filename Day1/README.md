@@ -168,3 +168,36 @@ int main(int argc, char *argv[])
 }    
 ```
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/2e1db3c6-1d6f-48f4-aa02-e5f24eb4fe12)
+
+Create a Button.qml as shown below
+<pre>
+import QtQuick 2.15
+
+Rectangle {
+    id: button
+
+    width: 150; height: 80
+
+    property string caption: "Button"
+    signal buttonClicked()
+
+    Text {
+        anchors.centerIn: parent
+        font.bold: true
+        font.pointSize: "15"
+        color: "white"
+
+        text: caption
+    }
+    
+    MouseArea {
+        anchors.fill: parent
+        
+        onClicked: {
+            console.log(caption + " clicked")
+            buttonClicked()
+        }
+    }
+}    
+</pre>
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/241d8806-537f-4338-9567-c7ca6172689c)
