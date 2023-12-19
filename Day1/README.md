@@ -60,3 +60,5 @@ Location
 Project Management, click on "Finish" button
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/284d8d26-3bb1-4dd7-a4b1-c5de2a3878a6)
 
+At this point, your HelloQML project will look as shown below
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/eb273192-15cf-41cf-8ad6-bd838c64703f)
