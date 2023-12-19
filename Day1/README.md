@@ -33,3 +33,20 @@ We need to update the line number 1 as shown below and Save all (Ctrl + Shift + 
 
 Next, open the main.cpp file which looks as shown below
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/437fbc61-cf0c-469f-9875-122e6cd05216)
+
+We need to update the main.cpp as shown below
+<pre>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+
+int main(int argc, char *argv[])
+{
+    QGuiApplication a(argc, argv);
+
+    QQmlApplicationEngine engine;
+    engine.load ( QUrl (QStringLiteral( "qrc:/main.qml")));
+
+    return a.exec();
+}
+</pre>
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/dc057a8a-cf91-4fe0-bafe-a846c400fa4b)
