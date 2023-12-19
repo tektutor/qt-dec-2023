@@ -71,3 +71,6 @@ Location
 
 Project Management, click on "Finish" button
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/b6102cf9-d783-4149-9599-1512061a1861)
+
+File Changed - Qt Creator, select "Yes to All"
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/e99adf97-69d3-4dd3-8f4c-31334f371d75)
