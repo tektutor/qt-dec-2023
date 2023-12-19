@@ -146,3 +146,25 @@ Run(Ctrl+R)
 Close the project (File menu --> Close Project)
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/c669eb70-12f9-4f7c-8105-f7293eeb8858)
 
+## Lab - Creating your own custom Controls(Components) and reuse them in your QML Project
+
+As you already know how to create a new QML Project, I'm skipping those steps.
+
+Once you have created a new project named ButtonApp
+
+You need to edit the main.cpp file as shown below
+```
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+
+int main(int argc, char *argv[])
+{
+    QGuiApplication a(argc, argv);
+
+    QQmlApplicationEngine engine;
+    engine.load( QUrl(QStringLiteral("qrc:/main.qml")));
+
+    return a.exec();
+}    
+```
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/2e1db3c6-1d6f-48f4-aa02-e5f24eb4fe12)
