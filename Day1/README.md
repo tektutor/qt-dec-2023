@@ -58,5 +58,5 @@ Location
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/de325c99-631f-4608-a76b-0f372bb9ecad)
 
 Project Management, click on "Finish" button
-![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/f7c5a8c0-f97a-49d4-879e-e6a6c203719e)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/284d8d26-3bb1-4dd7-a4b1-c5de2a3878a6)
 
