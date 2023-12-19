@@ -119,7 +119,7 @@ Window {
 
     Rectangle {
         width: 500; height: 500
-
+        anchors.centerIn: parent
         color: "blue"
 
         Text {
@@ -134,4 +134,11 @@ Window {
     }
 }    
 </pre>
-![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/0afb2fb5-7b78-4afa-aff6-09b216d9a46e)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/e2c908d9-74f1-466e-a07b-2d9451fa2e4b)
+
+You need to save all changes (Ctrl+Shif+S)
+
+Build(Ctrl+B)
+
+Run(Ctrl+R)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/19e61787-aba3-4bd2-8e98-5c0d100d4d56)
