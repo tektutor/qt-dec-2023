@@ -23,4 +23,11 @@ Kit Selection, click on "Next" button
 Project Management, click on "Finish" button
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/6ef54b9e-b21a-417e-a9d5-bcaf501ff6f8)
 
+We need to convert the Qt console application project into a QML project, hence we need to customize the HelloQML.pro file
+
+Currently your HelloQML.pro file will look as shown below
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/62b9baaf-1990-460b-ae16-185362b194e0)
+
+We need to update the line number 1 as shown below and Save all (Ctrl + Shift + S)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/f650055f-070f-4b71-a264-78441d90aa5a)
 
