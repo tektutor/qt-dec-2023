@@ -152,6 +152,9 @@ As you already know how to create a new QML Project, I'm skipping those steps.
 
 Once you have created a new project named ButtonApp
 
+You need to edit your .pro file, line 1 as shown below
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/1a10a8be-4914-422c-9cba-9eaf1fe5b747)
+
 You need to edit the main.cpp file as shown below
 ```
 #include <QGuiApplication>
@@ -218,3 +221,34 @@ Rectangle {
 }
 </pre>
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/a596a96e-aa0d-4428-9d48-ceff0ab32c72)
+
+You need to edit the main.qml file as shown below
+<pre>
+import QtQuick 2.15
+
+Window {
+    width: 1000; height: 1000
+    visible: true
+
+    Button {
+        anchors.centerIn: parent
+
+        caption: "Button 1"
+
+        onButtonClicked:
+            console.log(caption + " clicked")
+    }
+}    
+</pre>
+
+You may build your project (Ctrl+B)
+
+Run your project (Ctrl+R)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/a7776880-1058-4997-a4ef-10383ec85655)
+
+When your mouse cursor enter the button area, it would look as shown below
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/b773619c-c5a3-47a9-938f-4d17687b3f2a)
+
+When your mouse cursor leaves the button area, it would look as shown below
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/3ca524de-00a1-4898-a426-21bd789a567b)
+
