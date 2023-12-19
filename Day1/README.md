@@ -387,7 +387,23 @@ Create a new QML project following Lab1 Steps and name your project as "RowPosit
 ### Step 1 - Update your .pro file
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/1c608fa2-9d3c-4217-9fab-77ee711283e3)
 
-### Step 2 - Update your Button.qml as shown below
+### Step 2 - Update your main.cpp as shown below
+```
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+
+int main(int argc, char *argv[])
+{
+    QGuiApplication a(argc, argv);
+
+    QQmlApplicationEngine engine;
+    engine.load( QUrl(QStringLiteral("qrc:/main.qml")));
+
+    return a.exec();
+}    
+```
+
+### Step 3 - Update your Button.qml as shown below
 <pre>
 import QtQuick 2.15
 
@@ -436,7 +452,7 @@ Rectangle {
 }    
 </pre>
 
-### Step 3 - Update your main.qml as shown below
+### Step 4 - Update your main.qml as shown below
 <pre>
 import QtQuick 2.15
 
@@ -495,12 +511,206 @@ Window {
 }    
 </pre>
 
-### Step 4 - Save all your changes
+### Step 5 - Save all your changes
 Make sure all file changes are saved, press [Ctrl + Shift + S]
 
-### Step 5 - Build and Run your project
+### Step 6 - Build and Run your project
 
 To build your project, press [Ctrl + B]
 
 To Run your project, press [Ctrl + R]
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/89a018cc-e181-459a-948f-d950d8b1ae9c)
+
+
+## ⛹️‍♂️ Lab5 - Combining Row and Grid Positioner to develop a Simple Math Application
+
+Create a new QML project following Lab1 Steps and name your project as "SimpleMathApp"
+
+### Step 1 - Update your .pro file
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/4f3d2655-c541-4e88-878b-d8afff233eec)
+
+### Step 2 - Update your main.cpp as shown below
+```
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+
+int main(int argc, char *argv[])
+{
+    QGuiApplication a(argc, argv);
+
+    QQmlApplicationEngine engine;
+    engine.load( QUrl(QStringLiteral("qrc:/main.qml")));
+
+    return a.exec();
+}    
+```
+
+### Step 3 - Update your Button.qml file shown below
+<pre>
+import QtQuick 2.15
+
+Rectangle {
+    id: button
+    width: 100; height: 50
+
+    property string caption: "Button"
+    property string borderColor: "black"
+    property string textColor: "white"
+
+    signal buttonClicked()
+
+    border.color: borderColor
+    border.width: 2
+    radius: 25
+
+    color: "darkgray"
+
+    Text {
+        anchors.centerIn: parent
+        text: caption
+        color: textColor
+        font.bold: true
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        hoverEnabled: true
+
+        onClicked: {
+            console.log(caption + " clicked")
+            buttonClicked()
+        }
+        onEntered: {
+            button.borderColor = "blue"
+            button.scale = 1.1
+            button.textColor = "red"
+        }
+        onExited: {
+            button.borderColor = "black"
+            button.scale = 1.0
+            button.textColor = "white"
+        }
+    }
+}    
+</pre>
+
+### Step 4 - Update your Edit.qml file shown below
+<pre>
+ import QtQuick 2.15
+
+Rectangle {
+    width: 475; height: 80
+
+    property string caption: "Edit"
+
+    border.color: "blue"
+    border.width: 2
+    radius: 10
+
+    TextInput {
+        anchors.centerIn: parent
+        text: caption
+    }
+}   
+</pre>
+
+### Step 5 - Update your Label.qml as shown below
+<pre>
+import QtQuick 2.15
+
+Rectangle {
+    width: 150; height: 80
+
+    property string caption: "Label"
+
+    border.color: "black"
+    border.width: 2
+    radius: 10
+
+    color: "lightgray"
+
+    Text {
+        anchors.centerIn: parent
+        text: caption
+    }
+}    
+</pre>
+
+### Step 6 - Update your main.qml as shown below
+<pre>
+import QtQuick 2.15
+
+Window {
+    width: 1000; height: 1000
+    title: "Simple Math Application"
+    visible: true
+
+    Rectangle {
+        width: 800; height: 800
+        anchors.centerIn: parent
+
+        border.width: 20
+        border.color: "blue"
+        radius: 40
+
+        color: "lightblue"
+
+        Column {
+            anchors.centerIn: parent
+            spacing: 30
+            Grid {
+                rows: 3
+                columns: 2
+
+                Label{caption: "First Number"}
+                Edit {id: txtFirstNumber}
+
+                Label{caption: "Second Number"}
+                Edit {id: txtSecondNumber}
+
+                Label{caption: "Result"}
+                Edit {id: txtResult}
+            }
+
+            Row {
+                spacing: 5
+                Button{
+                    id: addButton
+                    caption: "Add"
+                }
+                Button{
+                    id: subtractButton
+                    caption: "Subtract"
+                }
+                Button{
+                    id: multiplyButton
+                    caption: "Multiply"
+                }
+                Button{
+                    id: dividemultiplyButton
+                    caption: "Divide"
+                }
+                Button{
+                    id: clearButton
+                    caption: "Clear"
+                }
+                Button{
+                    id: exitButton
+                    caption: "Exit"
+                }
+
+            }
+        } //Column
+    } //Rectangle
+}    
+</pre>
+
+### Step 7 - Save all your changes
+Make sure all file changes are saved, press [Ctrl + Shift + S]
+
+### Step 8 - Build and Run your project
+
+To build your project, press [Ctrl + B]
+
+To Run your project, press [Ctrl + R]
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/cab802d9-0012-4744-8aab-6bdf50236494)
