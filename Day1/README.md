@@ -782,6 +782,20 @@ Rectangle {
             }
         }
     ]
+
+    transitions: [
+        Transition {
+            from: "*"
+            to: "*"
+
+            PropertyAnimation {
+                duration: 1000
+                target: light
+                property: "color"
+                easing.type: Easing.InOutQuad
+            }
+        }
+    ]
 }    
 </pre>
 
