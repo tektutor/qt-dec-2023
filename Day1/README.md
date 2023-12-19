@@ -1,6 +1,6 @@
 # QML 2D Programming
 
-## Lab - Creating your first 2D QML Application
+## ⛹️‍♂️ Lab1 - Creating your first 2D QML Application
 
 Launch your Qt Creator IDE
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/89acafc7-a441-4af4-8da8-8046dac1fde6)
@@ -146,7 +146,7 @@ Run(Ctrl+R)
 Close the project (File menu --> Close Project)
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/c669eb70-12f9-4f7c-8105-f7293eeb8858)
 
-## Lab - Creating your own custom Controls(Components) and reuse them in your QML Project
+## ⛹️‍♀️ Lab2 - Creating your own custom Controls(Components) and reuse them in your QML Project
 
 As you already know how to create a new QML Project, I'm skipping those steps.
 
