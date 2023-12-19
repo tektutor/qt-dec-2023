@@ -100,5 +100,11 @@ Window {
 </pre>
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/70806ff7-059c-4e80-85ad-008f5a61578d)
 
-Now you can build and run the project
+Now you can build and run the project, Build(Ctrl+B) and Run(Ctrl+R)
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/3f722475-bebf-468c-978d-3974a4c05cbb)
+
+Build (Ctrl+B)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/533b7ae1-31e6-429b-a965-7d72abbee6df)
+
+Run (Ctrl+R)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/763d3ac6-7841-4cc6-911d-01d942f7d7e6)
