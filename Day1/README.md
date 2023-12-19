@@ -62,3 +62,7 @@ Project Management, click on "Finish" button
 
 At this point, your HelloQML project will look as shown below
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/eb273192-15cf-41cf-8ad6-bd838c64703f)
+
+We need to add a QML File as shown below
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/98515571-38ee-4b0c-8fcf-b9af60014acd)
+    
