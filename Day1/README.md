@@ -378,3 +378,4 @@ Make sure you have saved all your changes [Ctrl + Shift + S]
 Build (Ctrl+B)
 
 Run (Ctrl+R)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/87026a09-c7cb-4098-a666-fe850afd8531)
