@@ -142,3 +142,7 @@ Build(Ctrl+B)
 
 Run(Ctrl+R)
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/19e61787-aba3-4bd2-8e98-5c0d100d4d56)
+
+Close the project (File menu --> Close Project)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/c669eb70-12f9-4f7c-8105-f7293eeb8858)
+
