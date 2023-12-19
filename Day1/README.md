@@ -50,3 +50,6 @@ int main(int argc, char *argv[])
 }
 ```
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/dc057a8a-cf91-4fe0-bafe-a846c400fa4b)
+
+Next, we need to add a Qt Resource File to the project
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/62c4c37a-d02f-4886-aed3-1d370a932c0b)
