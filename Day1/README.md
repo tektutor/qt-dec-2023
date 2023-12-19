@@ -181,23 +181,40 @@ Rectangle {
     property string caption: "Button"
     signal buttonClicked()
 
+    color: "darkgray"
+
+    border.width: 5
+    border.color: Qt.color("blue")
+
+    radius: 40
+
     Text {
         anchors.centerIn: parent
         font.bold: true
-        font.pointSize: "15"
+        font.pointSize: 15
         color: "white"
 
         text: caption
     }
-    
+
     MouseArea {
         anchors.fill: parent
-        
+        hoverEnabled: true
+
         onClicked: {
-            console.log(caption + " clicked")
             buttonClicked()
         }
+
+        onEntered: {
+            button.scale = 1.1
+            button.border.color = Qt.color("red")
+        }
+
+        onExited: {
+            button.scale = 1.0
+            button.border.color = Qt.color("blue")
+        }
     }
-}    
+}
 </pre>
-![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/241d8806-537f-4338-9567-c7ca6172689c)
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/a596a96e-aa0d-4428-9d48-ceff0ab32c72)
