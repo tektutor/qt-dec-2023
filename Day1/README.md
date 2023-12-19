@@ -99,3 +99,6 @@ Window {
 }    
 </pre>
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/70806ff7-059c-4e80-85ad-008f5a61578d)
+
+Now you can build and run the project
+![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/6f1fc3d0-ac5e-4bc3-b934-5471efa48c85)
