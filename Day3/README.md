@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-Create a main.qml with below code
+Create main.qml with below code
 <pre>
 import QtQuick 2.15
 
@@ -35,7 +35,7 @@ Window {
 </pre>
 ![image](https://github.com/tektutor/qt-dec-2023/assets/12674043/c5791d60-e751-43a9-9ae5-ecda8e40e78c)
 
-Create file name FirstScreen.qml with below code
+Create file named FirstScreen.qml with below code
 <pre>
 import QtQuick 2.15
 import QtQml.StateMachine as SM
