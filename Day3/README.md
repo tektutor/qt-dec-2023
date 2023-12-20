@@ -58,6 +58,7 @@ Rectangle {
 
             SM.SignalTransition {
                 targetState: batteryCharging
+                //When the state machine receives the below signal it moves to batteryCharging state
                 signal: firstScreen.batteryCharging
             }
 
@@ -73,6 +74,7 @@ Rectangle {
 
             SM.SignalTransition {
                 targetState: batteryCharged
+                //When the state machine receives the below signal, it moves to batteryCharged state
                 signal: firstScreen.batteryCharged
             }
 
