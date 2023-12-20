@@ -63,9 +63,11 @@ Rectangle {
             }
 
             onEntered:
+                //Here your could notify other components in the application by emitting signal 
                 console.log("In Battery low state ...")
 
             onExited:
+                //Here your could notify other components in the application by emitting signal 
                 console.log("Leaving Battery low state ...")
         }
 
